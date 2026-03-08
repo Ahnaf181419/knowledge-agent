@@ -34,15 +34,9 @@ ENV/
 *.swo
 *~
 
-# Environment & Secrets
+# Environment
 .env
 .env.local
-config.py
-
-# Project-specific state and sessions
-sessions/
-debug/
-output/
 
 # Logs
 logs/
@@ -51,3 +45,6 @@ logs/
 # State files
 settings.json
 queue.json
+
+# Output
+output/

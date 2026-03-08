@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "created_at": "2026-02-21T22:42:08.661258",
+    "last_updated": "2026-02-21T22:42:08.668230",
+    "version": "1.0.0"
+  },
+  "methods": {
+    "simple_http": {
+      "total_attempts": 1,
+      "success": 1,
+      "failed": 0,
+      "total_time_ms": 500,
+      "total_words": 1000
+    },
+    "playwright": {
+      "total_attempts": 1,
+      "success": 1,
+      "failed": 0,
+      "total_time_ms": 2000,
+      "total_words": 1500
+    },
+    "playwright_alt": {
+      "total_attempts": 1,
+      "success": 0,
+      "failed": 1,
+      "total_time_ms": 3000,
+      "total_words": 0
+    },
+    "webscrapingapi": {
+      "total_attempts": 0,
+      "success": 0,
+      "failed": 0,
+      "total_time_ms": 0,
+      "total_words": 0
+    }
+  },
+  "daily": {
+    "2026-02-21": {
+      "simple_http": {
+        "success": 1,
+        "failed": 0,
+        "time_ms": 500,
+        "words": 1000
+      },
+      "playwright": {
+        "success": 1,
+        "failed": 0,
+        "time_ms": 2000,
+        "words": 1500
+      },
+      "playwright_alt": {
+        "success": 0,
+        "failed": 1,
+        "time_ms": 3000,
+        "words": 0
+      },
+      "webscrapingapi": {
+        "success": 0,
+        "failed": 0,
+        "time_ms": 0,
+        "words": 0
+      }
+    }
+  },
+  "domains": {
+    "test.example.com": {
+      "simple_http": {
+        "success": 1,
+        "failed": 0
+      },
+      "playwright": {
+        "success": 1,
+        "failed": 0
+      },
+      "playwright_alt": {
+        "success": 0,
+        "failed": 1
+      },
+      "webscrapingapi": {
+        "success": 0,
+        "failed": 0
+      }
+    }
+  },
+  "recent": [
+    {
+      "url": "https://test.example.com/article3",
+      "method": "playwright_alt",
+      "success": false,
+      "time_ms": 3000,
+      "word_count": 0,
+      "domain": "test.example.com",
+      "timestamp": "2026-02-21T22:42:08.668219"
+    },
+    {
+      "url": "https://test.example.com/article2",
+      "method": "playwright",
+      "success": true,
+      "time_ms": 2000,
+      "word_count": 1500,
+      "domain": "test.example.com",
+      "timestamp": "2026-02-21T22:42:08.667425"
+    },
+    {
+      "url": "https://test.example.com/article",
+      "method": "simple_http",
+      "success": true,
+      "time_ms": 500,
+      "word_count": 1000,
+      "domain": "test.example.com",
+      "timestamp": "2026-02-21T22:42:08.665777"
+    }
+  ],
+  "errors": [
+    {
+      "url": "https://test.example.com/article3",
+      "method": "playwright_alt",
+      "timestamp": "2026-02-21T22:42:08.668227"
+    }
+  ]
+}
