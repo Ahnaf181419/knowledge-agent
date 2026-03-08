@@ -1,0 +1,42 @@
+"""
+Web Scraper Configuration
+================================
+Edit these values to change scraping target.
+"""
+
+# ── NOVEL CONFIGURATION ────────────────────────────────────────────────
+NOVEL_NAME = ""
+NOVEL_SLUG = ""
+AUTHOR = ""
+GENRE = []
+
+# ── CHAPTER RANGE ──────────────────────────────────────────────────────
+CHAPTER_START = 0
+CHAPTER_END = 0
+
+# ── WEBSCRAPINGAPI CONFIGURATION ────────────────────────────────────────
+WEBSCRAPINGAPI_KEY = ""
+
+# ── WEBSCRAPINGAPI RATE LIMITS ──────────────────────────────────────────
+RATE_LIMIT_MONTHLY = 0
+RATE_LIMIT_RESET_DAY = 0
+
+# ── SOURCE URL ──────────────────────────────────────────────────────────
+BASE_URL = (
+    ""
+)
+
+# ── PLAYWRIGHT SETTINGS ─────────────────────────────────────────────────
+DELAY_MIN = 90
+DELAY_MAX = 120
+HEADLESS = True  # Set to False to see browser window (needed for CAPTCHA solving)
+
+# ── TIMEOUT SETTINGS (milliseconds) ──────────────────────────────────────
+REQUEST_TIMEOUT_MS = 60000
+API_REQUEST_TIMEOUT = 120
+
+# ── RETRY SETTINGS ───────────────────────────────────────────────────────
+RETRY_COUNT = 3
+
+# ── SESSION SETTINGS ─────────────────────────────────────────────────────
+SESSION_EXPIRY_DAYS = 7
