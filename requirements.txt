@@ -1,5 +1,5 @@
-streamlit>=1.28
-webscrapingapi
+gradio>=4.0
+sqlmodel
 trafilatura>=2.0
 playwright
 playwright-stealth
@@ -7,5 +7,30 @@ python-dotenv
 requests
 plotly>=5.18.0
 pandas>=2.0.0
-streamlit-shadcn-ui
-streamlit-extras
+# Scraping Engines
+cloudscraper>=1.2
+
+# Markdown Linting
+mdformat>=0.7
+mdformat-gfm>=0.1
+mdformat-frontmatter>=0.2
+
+# Testing
+pytest>=8.0
+pytest-asyncio>=0.23
+pytest-cov>=4.1
+pytest-mock>=3.12
+
+# Type checking
+mypy>=1.8
+pyright>=1.1
+
+# Linting
+ruff>=0.3
+
+# Utilities
+httpx>=0.27
+aiohttp>=3.9
+apscheduler>=3.10
+plyer>=2.1
+rank-bm25>=0.2

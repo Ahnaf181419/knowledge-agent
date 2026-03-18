@@ -1,8 +1,0 @@
-{
-  "current_month": "2026-02",
-  "calls_used": 8,
-  "calls_limit": 5000,
-  "warning_at": 4500,
-  "stop_at": 4998,
-  "last_reset": "2026-02-20"
-}

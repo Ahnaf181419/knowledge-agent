@@ -1,0 +1,106 @@
+{
+  "saved_at": "2026-03-08T16:54:09.768735",
+  "expires_at": "2026-04-07T16:54:09.768713",
+  "cookies": [
+    {
+      "name": "WMF-Last-Access",
+      "value": "08-Mar-2026",
+      "domain": "en.wikipedia.org",
+      "path": "/",
+      "expires": 1775736001.484815,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "WMF-Last-Access-Global",
+      "value": "08-Mar-2026",
+      "domain": ".wikipedia.org",
+      "path": "/",
+      "expires": 1775736001.48501,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "GeoIP",
+      "value": "DE:SN:Leipzig:51.34:12.38:v4",
+      "domain": ".wikipedia.org",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NetworkProbeLimit",
+      "value": "0.001",
+      "domain": "en.wikipedia.org",
+      "path": "/",
+      "expires": 1772988443.485089,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "WMF-Uniq",
+      "value": "Pz33MPeLgApeOwIGWWk1kwMdAAEBAFvdKfOKKMo105NeoA-r8U4JEAeSNaiwkk9I",
+      "domain": ".wikipedia.org",
+      "path": "/",
+      "expires": 1804547826.765144,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "enwikimwuser-sessionId",
+      "value": "e41450f1cbb76ccf33d0",
+      "domain": "en.wikipedia.org",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NetworkProbeLimit",
+      "value": "0.001",
+      "domain": "auth.wikimedia.org",
+      "path": "/",
+      "expires": 1772988444.675682,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "WMF-DP",
+      "value": "a0e,e5b",
+      "domain": "en.wikipedia.org",
+      "path": "/",
+      "expires": 1773027513.271598,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "WMF-Uniq",
+      "value": "GbT3-LHO99kq9RuHgWt9egMdAAEBAFvdDk_zVAocFZR_cQqGGpQX07ALQ9lT6ATk",
+      "domain": ".upload.wikimedia.org",
+      "path": "/",
+      "expires": 1804466715.61348,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "WMF-Uniq",
+      "value": "reHTRTAF24w2Qip3pnaRVwMdAAEBAFvdcMrIoi0Cy5NfrxZMWqEC7erLfosI3dBN",
+      "domain": ".auth.wikimedia.org",
+      "path": "/",
+      "expires": 1804465028.924698,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ]
+}

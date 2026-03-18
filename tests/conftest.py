@@ -1,74 +1,88 @@
-"""
-Pytest Configuration
+"""Test fixtures for KnowledgeAgent tests."""
 
-Fixtures and configuration for tests.
-"""
+import json
+import shutil
+import tempfile
+from pathlib import Path
 
 import pytest
-from pathlib import Path
-import tempfile
-import json
-
-from app.repositories import (
-    StateRepository, StatsRepository, HistoryRepository,
-    IStateRepository, IStatsRepository, IHistoryRepository
-)
-from app.services import ScrapingService, AnalyticsService, NovelService
-from app.container import Container
 
 
 @pytest.fixture
 def temp_dir():
     """Create a temporary directory for test files."""
-    with tempfile.TemporaryDirectory() as tmpdir:
-        yield Path(tmpdir)
+    tmpdir = tempfile.mkdtemp()
+    yield Path(tmpdir)
+    shutil.rmtree(tmpdir)
 
 
 @pytest.fixture
-def state_repo(temp_dir) -> IStateRepository:
-    """Create a state repository with temp storage."""
-    return StateRepository(temp_dir)
-
-
-@pytest.fixture
-def stats_repo(temp_dir) -> IStatsRepository:
-    """Create a stats repository with temp storage."""
-    file_path = temp_dir / "scraping_stats.json"
-    return StatsRepository(file_path)
-
-
-@pytest.fixture
-def history_repo(temp_dir) -> IHistoryRepository:
-    """Create a history repository with temp storage."""
-    file_path = temp_dir / "history.json"
-    return HistoryRepository(file_path)
-
-
-@pytest.fixture
-def container(temp_dir) -> Container:
-    """Create a container with temp storage."""
-    Container.reset()
-    container = Container(base_path=temp_dir)
-    return container
-
-
-@pytest.fixture
-def sample_url():
-    """Sample URL for testing."""
-    return "https://example.com/article/123"
-
-
-@pytest.fixture
-def sample_settings():
-    """Sample settings for testing."""
-    return {
+def mock_settings_file(temp_dir):
+    """Create a mock settings.json file."""
+    settings_file = temp_dir / "settings.json"
+    settings = {
         "theme": "dark",
         "export_format": "md",
         "output_folder": "output",
-        "concurrent_jobs": 3,
+        "concurrent_jobs": 2,
         "retry_count": 2,
-        "novel_delay_min": 90,
-        "novel_delay_max": 120,
-        "auto_save_queue": True,
-        "respect_robots_txt": True
+    }
+    settings_file.write_text(json.dumps(settings), encoding="utf-8")
+    return settings_file
+
+
+@pytest.fixture
+def mock_queue_file(temp_dir):
+    """Create a mock queue.json file."""
+    queue_file = temp_dir / "queue.json"
+    queue = {
+        "urls": [],
+        "novels": [],
+        "retry_normal": [],
+        "retry_novel": [],
+    }
+    queue_file.write_text(json.dumps(queue), encoding="utf-8")
+    return queue_file
+
+
+@pytest.fixture
+def mock_history_file(temp_dir):
+    """Create a mock history.json file."""
+    history_file = temp_dir / "history.json"
+    history = {
+        "normal": {},
+        "novels": {},
+    }
+    history_file.write_text(json.dumps(history), encoding="utf-8")
+    return history_file
+
+
+@pytest.fixture
+def mock_stats_file(temp_dir):
+    """Create a mock scraping_stats.json file."""
+    stats_file = temp_dir / "scraping_stats.json"
+    stats = {
+        "metadata": {"version": "1.0.0"},
+        "methods": {
+            "simple_http": {"total_attempts": 0, "success": 0, "failed": 0},
+            "playwright": {"total_attempts": 0, "success": 0, "failed": 0},
+        },
+        "daily": {},
+        "domains": {},
+        "recent": [],
+        "errors": [],
+    }
+    stats_file.write_text(json.dumps(stats), encoding="utf-8")
+    return stats_file
+
+
+@pytest.fixture
+def sample_urls():
+    """Sample URLs for testing."""
+    return {
+        "valid": "https://example.com/article",
+        "wiki": "https://en.wikipedia.org/wiki/Python_(programming_language)",
+        "novel": "https://wtr-lab.com/novel/12281/chapter-177",
+        "youtube": "https://youtube.com/watch?v=dQw4w9WgXcQ",
+        "invalid": "not-a-url",
     }
